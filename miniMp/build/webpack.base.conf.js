@@ -24,8 +24,8 @@ function getEntry (rootSrc) {
    return map;
 }
 
-const appEntry = { app: resolve('./src/main.js') }
-const pagesEntry = getEntry(resolve('./src'), 'pages/**/main.js')
+const appEntry = { app: resolve('./src-demo1-demo/main.js') }
+const pagesEntry = getEntry(resolve('./src-demo1-demo'), 'pages/**/main.js')
 const entry = Object.assign({}, appEntry, pagesEntry)
 
 let baseWebpackConfig = {
@@ -107,7 +107,7 @@ let baseWebpackConfig = {
       from: '**/*.json',
       to: ''
     }], {
-      context: 'src/'
+      context: 'src-demo1-demo/'
     }),
     new CopyWebpackPlugin([
       {
